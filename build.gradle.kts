@@ -39,3 +39,7 @@ tasks.withType<KotlinCompile> {
 		jvmTarget = "1.8"
 	}
 }
+//do not create plain jar
+tasks.getByName<Jar>("jar") {
+	enabled = false
+}
